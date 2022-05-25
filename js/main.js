@@ -24,30 +24,41 @@ let inicio = prompt('Hola ' + cliente + '!\nElegí tus tortas favoritas para añ
 let saldo = 0;
 const descuento = (a, b) => a * b;
 const pedido = [];
+const pedido_1 = [];
 
 
 while (inicio != '8') {
     switch (inicio) {
         case '1':
+            let oreo = tortas [1];
+            pedido_1.push(oreo);
             saldo = saldo + 1500;
             alert(cliente + ' agregaste una Torta Oreo a tu pedido\nSu saldo es $' + saldo);
             break;
         case '2':
+            let chocoOreo = tortas [2];
+            pedido_1.push(chocoOreo);
             saldo = saldo + 1650;
             alert(cliente + ' agregaste una Choco Oreo o a tu pedido\nSu saldo es $' + saldo);
             break;
 
         case '3':
+            let chocotorta = tortas [3];
+            pedido_1.push(chocotorta);
             saldo = saldo + 2100;
             alert(cliente + ' agregaste una Chocotorta a tu pedido\nSu saldo es $' + saldo);
             break;
 
         case '4':
+            let cheeseCake = tortas [4];
+            pedido_1.push(cheeseCake);
             saldo = saldo + 1950;
             alert(cliente + ' agregaste una Cheese Cake a tu pedido\nSu saldo es $' + saldo);
             break;
 
         case '5':
+            let tiramisu = tortas [5];
+            pedido_1.push(tiramisu);
             saldo = saldo + 1250;
             alert(cliente + ' agregaste un Tiramisú a tu pedido\nSu saldo es $' + saldo);
             break;
@@ -68,10 +79,10 @@ while (inicio != '8') {
                         alert(descuento + ' no es una opcion valida');
                         break;
                 }
-                alert('El total de su compra es ' + saldo);
+                alert(cliente+' el total de tu compra es $' + saldo);
                 break;
             }
-            alert('El total de su compra es ' + saldo);
+            alert(cliente+' el total de tu compra es $' + saldo);
             break;
 
         case '7':
@@ -104,7 +115,7 @@ while (inicio != '8') {
             }
 
             alert(mostrar(busqueda(criterio, tortas)));
-            console.log(mostrar(busqueda(criterio, tortas)));
+            console.log(tortas);
 
 
             break;
@@ -114,8 +125,9 @@ while (inicio != '8') {
             break;
     }
     pedido.push(saldo);
-    inicio = prompt('Elija sus productos favoritos para añadir al carrito. \n Seleccione la torta que desee: \n 1- Oreo Cake ($1500) \n 2- Choco Oreo ($1650)  \n 3- Chocotorta ($2100) \n 4- Cheesecake ($1950)\n 5- Tiramisú ($1250)\n 6- Ver mi carrito \n 7-Finalizar compra');
+    inicio = prompt('Elija sus productos favoritos para añadir al carrito. \n Seleccione la torta que desee: \n 1- Oreo Cake ($1500) \n 2- Choco Oreo ($1650)  \n 3- Chocotorta ($2100) \n 4- Cheesecake ($1950)\n 5- Tiramisú ($1250)\n 6- Ver mi carrito \n 7-Buscar torta \n 8-Finalizar compra');
 
 }
 alert('Finalizaste la compra'+cliente+ '! Te esperamos pronto!');
 console.log(pedido);
+console.log(pedido_1);
